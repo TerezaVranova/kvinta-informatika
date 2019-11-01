@@ -1,10 +1,11 @@
 import tkinter
-canvas=tkinter.Canvas(width=800,height=600,background="white")
+w,h=800,600
+canvas=tkinter.Canvas(width=w,height=h,background="white")
 canvas.pack()
 import random
 
 def more():
-    canvas.create_rectangle(0,300,800,600,fill="blue")
+    canvas.create_rectangle(0,h/2,w,h,fill="blue")
 
 def mesiac(x=500,y=random.randint(50,170),pozadie="white",farba="yellow",r=40):
     canvas.create_oval(x-r,y-r,x+r,y+r,fill=farba,outline=farba)
@@ -12,7 +13,7 @@ def mesiac(x=500,y=random.randint(50,170),pozadie="white",farba="yellow",r=40):
 
 def odraz(x=500,y=random.randint(50,170),r=40):
     mesiac(x,y,"white","yellow",r)
-    mesiac(x,600-y,pozadie="blue",farba="yellow",r=40)
+    mesiac(x,h-y,pozadie="blue",farba="yellow",r=40)
 
 def vlajka(x,y,farba="darkgreen"):
     canvas.create_oval(x,y,x+300,y+300,fill="brown")
@@ -28,9 +29,7 @@ def logo(x,y,r=50,farba="light sky blue",pozadie="red"):
     mesiac_obrateny(x-r*1.125,y,pozadie,farba,r)
 
 def lodka(x,y,velkost):
-    a=10
-    b=100
-    r=8
+    a,b,r=10,100,8
     canvas.create_rectangle(x,y,x+velkost*a,y+velkost*b,fill="brown",outline="brown")
     canvas.create_polygon(x+velkost*a/2,y,x+velkost*3*a,y+velkost*b/2,x+velkost*a/2,y+velkost*b*2/3,fill="white",outline="black")
     canvas.create_polygon(x-velkost*b/2,y+velkost*b*3/4,x+velkost*b/2+velkost*a,y+velkost*b*3/4,x+velkost*b/4+velkost*a,y+velkost*b,x-velkost*b/4,y+velkost*b,fill="saddle brown",outline="black")
