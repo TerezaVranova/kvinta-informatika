@@ -11,12 +11,12 @@ for a in range(10):
     x,y,r=random.randint(0,800),random.randint(0,700),random.randint(30,80)
     strom(x,y,r)
 
-def trava(x,y,m,n):
+def trava(x,y):
     x,y=random.randint(0,800),random.randint(0,700)
     for b in range(3,11):
         m,n=random.randint(-30,30),random.randint(-30,-5)
-        canvas.create_line(x,y,x+m,y+n,fill="green",width=2)
+        canvas.create_line(x,y,x+m,y+n,fill="green",width=random.randint(1,5))
 
 for c in range(20):
     x,y,m,n=random.randint(0,800),random.randint(0,700),random.randint(-30,30),random.randint(-50,-5)
-    trava(x,y,m,n)
+    trava(x,y)
