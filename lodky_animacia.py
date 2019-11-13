@@ -37,8 +37,11 @@ def lodka(x,y,velkost):
     logo(x+velkost*a/2,y+velkost*b*7/8,r*velkost,farba="light sky blue",pozadie="saddle brown")
 
 def flotila():
+    a=0
+    x=500-100*a
     for a in range(1,4):
-        lodka(500-100*a,200,a)
+        x=500-100*a
+        lodka(x,200,a)
 
 def obraz():
     vlajka(-50,275,"darkgreen")
@@ -60,5 +63,10 @@ def mesiacmesiac():
 
 mesiacmesiac()
 
-
+def lodkalodka():
+    for c in range(1000):
+        canvas.delete("all")
+        for d in range(3):
+            
+        
         
