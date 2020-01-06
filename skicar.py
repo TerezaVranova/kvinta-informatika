@@ -1,5 +1,4 @@
 import tkinter
-from random import randrange, randint
 x_max,y_max=800,600
 canvas=tkinter.Canvas(width=x_max,height=y_max,bg="white")
 canvas.pack()
